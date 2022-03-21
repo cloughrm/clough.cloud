@@ -1,0 +1,7 @@
+@import url('./reset.css');
+
+html {
+	--primary-color: #fad75f;
+
+	font-family: 'Roboto Condensed', sans-serif;
+}

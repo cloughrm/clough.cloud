@@ -1,0 +1,16 @@
+{
+  "name": "clough.cloud",
+  "version": "1.0.0",
+  "description": "Ryan Clough's personal website",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "keywords": ["blog", "11ty"],
+  "author": "Ryan Clough",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
