@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: topic
+  filter:
+    - all
+    - blog_posts
+    - topics
+eleventyComputed:
+  title: Topic “{{ topic }}”
+permalink: "/topics/{{ topic | slugify }}/"
+---
+<h1>Topic “{{ topic }}”</h1>
+
+{% for post in collections[topic] %}
+  <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+  <p>{{ post.data.description }}</p>
+{% endfor %}
+
+<p>See <a href="{{ '/topics/' | url }}">all topics</a>.</p>
