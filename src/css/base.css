@@ -2,6 +2,15 @@
 
 html {
 	--primary-color: #fad75f;
-
 	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	padding: 20px;
+}
+
+body .content {
+	margin: 0 auto;
+	max-width: 700px;
+	background-color: white;
 }

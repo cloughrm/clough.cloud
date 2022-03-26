@@ -1,3 +1,5 @@
+const EXCLUDED_TAGS = ['blog_posts'];
+
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/assets/');
@@ -7,13 +9,39 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('src/css/');
 
   eleventyConfig.addCollection('topics', function(collectionApi) {
-    const tagsList = new Set();
+    const tagsHash = {};
     collectionApi.getAll().map(item => {
       if (item.data.tags) {
-        item.data.tags.map(tag => tagsList.add(tag))
+        item.data.tags.map((tag) => {
+
+          // Remove excluded tags
+          if (EXCLUDED_TAGS.includes(tag)) {
+            return;
+          }
+
+          // Initalize the tag count at 1
+          if (!Object.keys(tagsHash).includes(tag)) {
+            tagsHash[tag] = 1;
+            return;
+          }
+
+          // Increment the tag count
+          tagsHash[tag] += 1;
+        })
       }
     });
-    return tagsList;
+
+    // Convert the tag hash into a sorted list
+    const sorted = [];
+    for (const [k, v] of Object.entries(tagsHash)) {
+      sorted.push([k, v]);
+    }
+    sorted.sort(function(a, b) {
+      return a[1] - b[1];
+    }).reverse();
+
+    console.log(`[info] Sorted Tags: ${sorted.join('|')}`);
+    return sorted;
   });
 
   return {

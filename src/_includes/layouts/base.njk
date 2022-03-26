@@ -11,10 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="/css/footer.css">
 </head>
 	<body>
-		{% include "components/header.njk" %}
+		<div class="content">
+			{% include "components/about.njk" %}
 
-		{{ content | safe }}
+			{{ content | safe }}
 
-		{% include "components/footer.njk" %}
+			{% include "components/footer.njk" %}
+		</div>
 	</body>
 </html>

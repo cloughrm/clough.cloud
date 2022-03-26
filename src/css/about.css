@@ -1,8 +1,25 @@
 .header img {
-	border-radius: 5%;
-	width: 100px;
+	border-radius: 100%;
+	width: 85px;
+	height: 85px;
 }
 
-/*.header {
-	color: var(--primary-color);
-}*/
+.header {
+	display: flex;
+	align-items: center;
+}
+
+.header div:first-child {
+	width: 85px;
+	flex: 0 0 85px;
+}
+
+.header p {
+	padding-left: 1rem;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	column-gap: 20px;
+}

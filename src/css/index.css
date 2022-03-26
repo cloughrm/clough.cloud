@@ -1,0 +1,31 @@
+.body-content {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	gap: 1rem;
+}
+
+.body-content .blog-post-list, .body-content .topics {
+	padding: 1rem;
+}
+
+.body-content .blog-post-list {
+	flex-grow: 3;
+	flex-shrink: 1;
+	flex-basis: 25rem;
+	min-width: 25rem;
+}
+
+.body-content .blog-post-list h3 small {
+	font-size: .75rem;
+	font-weight: normal;
+}
+
+.body-content .blog-post-list p {
+	margin-bottom: .75rem;
+}
+
+.body-content .topics {
+	background-color: lightgray;
+	border-radius: 5%;
+}
+
