@@ -25,7 +25,11 @@
 }
 
 .body-content .topics {
-	background-color: lightgray;
+	background-color: var(--gray-200);
 	border-radius: 5%;
+	flex-grow: 1;
 }
 
+.body-content .topics .count {
+	font-size: .75rem;
+}

@@ -20,7 +20,8 @@ title: "Blog | clough.cloud"
 		<h2>Topics</h2>
 		{% for topic, count in collections.topics %}
 			<div>
-				<a href="/topics/{{topic | slugify}}">{{topic | slugify}} ({{ count }})</a>
+				<a href="/topics/{{topic | slugify}}">{{topic | slugify}}</a>
+				<span class="count"> ({{ count }})</span>
 			</div>
 		{% endfor %}
 	</div>
