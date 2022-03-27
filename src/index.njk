@@ -2,28 +2,7 @@
 layout: layouts/base
 title: "Blog | clough.cloud"
 ---
-
 <div class="body-content">
-
-	<div class="blog-post-list">
-		{% for post in collections.blog_posts %}
-			<h3>
-				<a href="{{ post.url }}">{{ post.data.title }}</a>
-				{# This is such a hack.... todo: fix #}
-				<small>{{ post.date.toUTCString().split(' 00')[0] }}</small>
-			</h3>
-			<p>{{ post.data.description }}</p>
-		{% endfor %}
-	</div>
-
-	<div class="topics">
-		<h2>Topics</h2>
-		{% for topic, count in collections.topics %}
-			<div>
-				<a href="/topics/{{topic | slugify}}">{{topic | slugify}}</a>
-				<span class="count"> ({{ count }})</span>
-			</div>
-		{% endfor %}
-	</div>
-
+	{% include "components/blog-posts-list.njk" %}
+	{% include "components/topics.njk" %}
 </div>

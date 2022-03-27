@@ -1,0 +1,10 @@
+<div class="blog-post-list">
+	{% for post in collections.blog_posts %}
+		<h3>
+			<a href="{{ post.url }}">{{ post.data.title }}</a>
+			{# This is such a hack.... todo: fix #}
+			<small>{{ post.date.toUTCString().split(' 00')[0] }}</small>
+		</h3>
+		<p>{{ post.data.description }}</p>
+	{% endfor %}
+</div>

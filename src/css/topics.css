@@ -1,0 +1,9 @@
+.topics {
+	background-color: var(--gray-200);
+	border-radius: 5%;
+	flex-grow: 1;
+}
+
+.topics .count {
+	font-size: .75rem;
+}
