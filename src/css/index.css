@@ -1,7 +1,13 @@
 .body-content {
-	display: flex;
-	flex-wrap: wrap-reverse;
+	flex-direction: row-reverse;
 	gap: 1rem;
+	margin-top: 1rem;
+}
+
+@media (min-width: 50rem) {
+	.body-content {
+		display: flex;
+	}
 }
 
 .body-content > div{

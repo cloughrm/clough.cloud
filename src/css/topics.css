@@ -1,9 +1,13 @@
 .topics {
 	background-color: var(--gray-200);
-	border-radius: 5%;
-	flex-grow: 1;
+	border-radius: 10px;
+	flex: 0 0 250px;
 }
 
 .topics .count {
 	font-size: .75rem;
+}
+
+.topic {
+	display: inline-block;
 }

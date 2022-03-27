@@ -1,8 +1,5 @@
 .blog-post-list {
-	flex-grow: 3;
-	flex-shrink: 1;
-	flex-basis: 25rem;
-	min-width: 25rem;
+	flex: 1;
 }
 
 .blog-post-list h3 small {
