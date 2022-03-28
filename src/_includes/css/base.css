@@ -1,0 +1,23 @@
+html {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+body {
+	padding: 20px;
+}
+
+body .content {
+	margin: 0 auto;
+	max-width: 800px;
+	background-color: white;
+}
+
+.footer {
+	margin-top: 15px;
+	width: 100%;
+	min-height: 8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
