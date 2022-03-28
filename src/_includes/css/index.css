@@ -1,15 +1,15 @@
-.body-content {
+main {
 	flex-direction: row-reverse;
 	gap: 1rem;
 	margin-top: 1rem;
 }
 
 @media (min-width: 50rem) {
-	.body-content {
+	main {
 		display: flex;
 	}
 }
 
-.body-content > div {
+main > div {
 	padding: 1rem;
 }

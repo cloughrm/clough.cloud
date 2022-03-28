@@ -9,5 +9,11 @@
 }
 
 .topic {
+	/* TODO: Change to flexbox? */
 	display: inline-block;
+	margin-left: .5rem;
+}
+
+.topic:first-of-type {
+	margin-left: 0;
 }
