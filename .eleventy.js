@@ -1,3 +1,5 @@
+const htmlmin = require('html-minifier');
+
 const EXCLUDED_TAGS = ['blog_posts'];
 
 module.exports = function(eleventyConfig) {
@@ -42,6 +44,19 @@ module.exports = function(eleventyConfig) {
 
     console.log(`[info] Sorted Tags: ${sorted.join('|')}`);
     return sorted;
+  });
+
+  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+    if (outputPath.endsWith('.html')) {
+      let minified  = htmlmin.minify(content, {
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+      return minified;
+    }
+    return content;
   });
 
   return {

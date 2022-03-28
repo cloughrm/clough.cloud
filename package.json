@@ -7,10 +7,14 @@
     "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy"
   },
-  "keywords": ["blog", "11ty"],
+  "keywords": [
+    "blog",
+    "11ty"
+  ],
   "author": "Ryan Clough",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^1.0.0",
+    "html-minifier": "^4.0.0"
   }
 }
