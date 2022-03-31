@@ -1,4 +1,4 @@
-<div class="header">
+<div id="header">
 	<div>
 		<a href="/">
 			<img class="profile-pic" />
@@ -12,7 +12,39 @@
 	<a href="/projects">Projects</a>
 </div> #}
 
-{% set js %} {% include "scripts/header.js" %} {% endset %}
 <script type="text/javascript">
-	{{ js | safe }}
+	(function () {
+		let randInt = Math.floor(Math.random() * 3) + 1;
+		let img = document.getElementsByClassName('profile-pic')[0];
+		img.src = '/assets/images/profile-pic-' + randInt + '.jpg';
+		img.alt = 'Ryan Clough profile picture';
+	})();
 </script>
+
+<style type="text/css">
+	#header img {
+		border-radius: 100%;
+		width: 85px;
+		height: 85px;
+	}
+
+	#header {
+		display: flex;
+		align-items: center;
+	}
+
+	#header div:first-child {
+		width: 85px;
+		flex: 0 0 85px;
+	}
+
+	#header p {
+		padding-left: 1rem;
+	}
+
+/*	.nav {
+		display: flex;
+		justify-content: center;
+		column-gap: 20px;
+	}*/
+</style>

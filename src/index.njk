@@ -6,3 +6,21 @@ title: "Blog | clough.cloud"
 	{% include "components/topics.njk" %}
 	{% include "components/blog-posts-list.njk" %}
 </main>
+
+<style type="text/css">
+	main {
+		flex-direction: row-reverse;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	@media (min-width: 50rem) {
+		main {
+			display: flex;
+		}
+	}
+
+	main > div {
+		padding: 1rem;
+	}
+</style>
