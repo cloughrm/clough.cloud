@@ -21,3 +21,6 @@ why? ensure browser compabality - is this really needed?
 https://codepen.io/thecodercoder/pen/XWbLjaO?editors=1100
 
 https://medium.com/@tarngerine/how-the-heck-do-i-use-eleventy-the-intro-guide-i-wish-i-had-84d9b2689031
+
+### Minify CSS Classes and IDs
+https://github.com/posthtml/posthtml-minify-classnames

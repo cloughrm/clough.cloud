@@ -1,32 +1,35 @@
 <aside>
 	<h2>Topics</h2>
-	{% for topic, count in collections.topics %}
-		<div class="topic">
-			<a href="/topics/{{topic | slugify}}">{{topic | slugify}}</a>
-			<span class="count"> ({{ count }})</span>
-		</div>
-	{% endfor %}
+	<div class="topics-wrapper">
+		{% for topic, count in collections.topics %}
+			<div class="topic">
+				<a href="/topics/{{topic | slugify}}">{{topic | slugify}}</a>
+				<span class="count"> ({{ count }})</span>
+			</div>
+		{% endfor %}
+	</div>
 </aside>
 
 <style type="text/css">
 	aside {
-		background-color: var(--gray-200);
+		/*background-color: var(--gray-200);*/
 		border-radius: 10px;
 		flex: 0 0 250px;
 		padding: 1rem;
+	}
+
+	aside h2 {
+		/*font-variant: small-caps;*/
 	}
 
 	aside .count {
 		font-size: .75rem;
 	}
 
-	aside .topic {
-		/* TODO: Change to flexbox? */
-		display: inline-block;
-		margin-left: .5rem;
-	}
-
-	aside .topic:first-of-type {
-		margin-left: 0;
+	aside .topics-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 1rem;
+		row-gap: .25rem;
 	}
 </style>
