@@ -1,11 +1,11 @@
-<div id="header">
+<header>
 	<div>
 		<a href="/">
-			<img class="profile-pic" />
+			<img id="profile-pic" />
 		</a>
 	</div>
 	<p>Hey there, I'm Ryan 👋🏻. Welcome to my personal blog where I mostly write about web development & products. I spend my days building automated cloud incident response tools 👨🏼‍💻☁️. You can find me on <a href="https://twitter.com/hotF1X">Twitter</a> & <a href="https://www.linkedin.com/in/cloughrm/">LinkedIn</a>.</p>
-</div>
+</header>
 
 {# <div class="nav">
 	<a href="/">Blog</a>
@@ -15,30 +15,30 @@
 <script type="text/javascript">
 	(function () {
 		let randInt = Math.floor(Math.random() * 3) + 1;
-		let img = document.getElementsByClassName('profile-pic')[0];
+		let img = document.getElementById('profile-pic');
 		img.src = '/assets/images/profile-pic-' + randInt + '.jpg';
 		img.alt = 'Ryan Clough profile picture';
 	})();
 </script>
 
 <style type="text/css">
-	#header img {
+	header img {
 		border-radius: 100%;
 		width: 85px;
 		height: 85px;
 	}
 
-	#header {
+	header {
 		display: flex;
 		align-items: center;
 	}
 
-	#header div:first-child {
+	header div:first-child {
 		width: 85px;
 		flex: 0 0 85px;
 	}
 
-	#header p {
+	header p {
 		padding-left: 1rem;
 	}
 

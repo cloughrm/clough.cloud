@@ -1,4 +1,6 @@
+const posthtml = require('posthtml');
 const htmlmin = require('html-minifier');
+const minifyClassnames = require('posthtml-minify-classnames');
 
 const EXCLUDED_TAGS = ['blog_posts'];
 
@@ -38,15 +40,24 @@ const generateTopics = function(collectionApi) {
   return sorted;
 };
 
-const minify = function(content, outputPath) {
+const minify = async function(content, outputPath) {
   if (outputPath.endsWith('.html')) {
-    let minified  = htmlmin.minify(content, {
+
+    // Minify the HTML
+    let minified = htmlmin.minify(content, {
       removeComments: true,
       collapseWhitespace: true,
       minifyCSS: true,
       minifyJS: true,
     });
-    return minified;
+
+    // Minify the CSS attributes
+    const { html } = await posthtml().use(minifyClassnames({
+      filter: /^#profile-pic/, // Needed for javascript
+      genNameClass: 'genNameEmoji', // genName Generates the smallest possible names
+      genNameId: 'genNameEmoji',
+    })).process(minified);
+    return html;
   }
   return content;
 };
