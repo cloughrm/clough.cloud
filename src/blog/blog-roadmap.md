@@ -24,3 +24,5 @@ https://medium.com/@tarngerine/how-the-heck-do-i-use-eleventy-the-intro-guide-i-
 
 ### Minify CSS Classes and IDs
 https://github.com/posthtml/posthtml-minify-classnames
+
+### Add a custom 404 page
