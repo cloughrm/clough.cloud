@@ -10,7 +10,7 @@ body {
 	padding: 0;
 }
 
-body .content {
+body .layout {
 	margin: 0 auto;
 	max-width: 900px;
 	background-color: white;
@@ -25,7 +25,7 @@ body .content {
 	body {
 		padding: 1.5rem;
 	}
-	body .content {
+	body .layout {
 		box-shadow: 0px 0px 20px 0px #C3C3C3;
 		-webkit-box-shadow: 0px 0px 20px 0px #C3C3C3;
 		border-radius: 5px;

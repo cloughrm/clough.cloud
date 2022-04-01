@@ -1,4 +1,4 @@
-<div id="blog-post-list">
+<main>
 	{% for post in collections.blog_posts %}
 		<h3>
 			<a href="{{ post.url }}">{{ post.data.title }}</a>
@@ -7,19 +7,20 @@
 		</h3>
 		<p>{{ post.data.description }}</p>
 	{% endfor %}
-</div>
+</main>
 
 <style type="text/css">
-	#blog-post-list {
+	main {
 		flex: 1;
+		padding: 1rem;
 	}
 
-	#blog-post-list h3 small {
+	main h3 small {
 		font-size: .75rem;
 		font-weight: normal;
 	}
 
-	#blog-post-list p {
+	main p {
 		margin-bottom: .75rem;
 	}
 </style>

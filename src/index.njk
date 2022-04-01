@@ -2,25 +2,21 @@
 layout: layouts/base
 title: "Blog | clough.cloud"
 ---
-<main>
-	{% include "components/topics.njk" %}
+<section id="blog">
+	{% include "components/topics-list.njk" %}
 	{% include "components/blog-posts-list.njk" %}
-</main>
+</section>
 
 <style type="text/css">
-	main {
+	section#blog {
 		flex-direction: row-reverse;
 		gap: 1rem;
 		margin-top: 1rem;
 	}
 
 	@media (min-width: 50rem) {
-		main {
+		section#blog {
 			display: flex;
 		}
-	}
-
-	main > div {
-		padding: 1rem;
 	}
 </style>

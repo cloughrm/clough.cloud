@@ -1,4 +1,4 @@
-<div id="topics">
+<aside>
 	<h2>Topics</h2>
 	{% for topic, count in collections.topics %}
 		<div class="topic">
@@ -6,26 +6,27 @@
 			<span class="count"> ({{ count }})</span>
 		</div>
 	{% endfor %}
-</div>
+</aside>
 
 <style type="text/css">
-	#topics {
+	aside {
 		background-color: var(--gray-200);
 		border-radius: 10px;
 		flex: 0 0 250px;
+		padding: 1rem;
 	}
 
-	#topics .count {
+	aside .count {
 		font-size: .75rem;
 	}
 
-	#topics .topic {
+	aside .topic {
 		/* TODO: Change to flexbox? */
 		display: inline-block;
 		margin-left: .5rem;
 	}
 
-	#topics .topic:first-of-type {
+	aside .topic:first-of-type {
 		margin-left: 0;
 	}
 </style>
