@@ -10,7 +10,14 @@ title: "Blog | clough.cloud"
 <style type="text/css">
 	section#blog {
 		flex-direction: row-reverse;
-		gap: 1rem;
+		gap: 2rem;
 		margin-top: 1rem;
+	}
+
+	/* Desktop Layout */
+	@media (min-width: {{ meta.desktopMinWidth }}) {
+		section#blog {
+			display: flex;
+		}
 	}
 </style>

@@ -16,5 +16,6 @@ module.exports = function() {
       <a href="https://www.linkedin.com/in/cloughrm/">LinkedIn</a>.`,
     author: 'Ryan Clough',
     year: new Date().getFullYear(),
+    desktopMinWidth: '50rem',
   }
 }

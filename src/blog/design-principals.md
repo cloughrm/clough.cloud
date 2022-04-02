@@ -14,3 +14,5 @@ https://css-tricks.com/is-vendor-prefixing-dead/
 ### Performance (minified & minimal libraries & overhead & static site)
 
 ### Minimal styling, & performance
+
+### Images stored at 4x resolution.

@@ -62,6 +62,19 @@ const minify = async function(content, outputPath) {
   return content;
 };
 
+const topicImgSrc = function (topic) {
+  topic = topic.toLowerCase();
+  let prefix = '/assets/images';
+  switch (topic) {
+    case 'css':
+      return `${prefix}/css3.png`;
+    case 'threat intelligence':
+      return `${prefix}/graph.png`;
+    default:
+      return `${prefix}/tag.png`;
+  }
+};
+
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/assets/');
@@ -70,7 +83,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css/');
   eleventyConfig.addWatchTarget('src/css/');
 
+  eleventyConfig.addShortcode('topicImgSrc', topicImgSrc);
+
   eleventyConfig.addCollection('topics', generateTopics);
+
   eleventyConfig.addTransform('htmlmin', minify);
 
   return {
