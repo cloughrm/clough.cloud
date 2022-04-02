@@ -53,8 +53,8 @@ const minify = async function(content, outputPath) {
 
     // Minify the CSS attributes
     const { html } = await posthtml().use(minifyClassnames({
-      filter: /^#profile-pic/, // Needed for javascript
-      genNameClass: 'genNameEmoji', // genName Generates the smallest possible names
+      filter: /^#profile-pic/, // #profile-pic is referenced in scripts
+      genNameClass: 'genNameEmoji',
       genNameId: 'genNameEmoji',
     })).process(minified);
     return html;
