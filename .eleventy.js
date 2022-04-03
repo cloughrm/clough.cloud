@@ -50,7 +50,6 @@ const minify = async function(content, outputPath) {
       minifyCSS: true,
       minifyJS: true,
     });
-
     // Minify the CSS attributes
     const { html } = await posthtml().use(minifyClassnames({
       filter: /^#profile-pic/, // #profile-pic is referenced in scripts
@@ -87,7 +86,9 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection('topics', generateTopics);
 
-  eleventyConfig.addTransform('htmlmin', minify);
+  if (process.env.ENV === 'prod') {
+    eleventyConfig.addTransform('htmlmin', minify);
+  }
 
   return {
     dir: {
