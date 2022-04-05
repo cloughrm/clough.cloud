@@ -2,7 +2,7 @@
 title: Design Principals
 description: Design principals of clough.cloud
 date: 2022-04-02
-tags: ["design"]
+tags: ["design", "CSS"]
 ---
 ### No vendor specific features, no css prefixing
 https://css-tricks.com/is-vendor-prefixing-dead/

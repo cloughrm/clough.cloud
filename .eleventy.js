@@ -76,7 +76,7 @@ const topicImgSrc = function(topic) {
 };
 
 const toUTCString = function(dt) {
-  return moment.utc(dt).format('MMMM Do YYYY');
+  return moment.utc(dt).format('MMMM Do, YYYY');
 }
 
 module.exports = function(eleventyConfig) {
