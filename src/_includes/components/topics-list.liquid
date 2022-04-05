@@ -1,11 +1,12 @@
 <aside>
 	<h3>Filter By Topic</h3>
 	<div class="topics-wrapper">
-		{% for topic, count in collections.topics %}
+		{% for topicAndCount in collections.topics %}
+			{% assign topic = topicAndCount[0] %}
+			{% assign count = topicAndCount[1] %}
 			<a class="topic" href="/topics/{{topic | slugify}}">
 				<div class="icon"><img src="{% topicImgSrc topic %}"></div>
 				<span class="label">{{topic}}</span>
-				{# <a href="/topics/{{topic | slugify}}"></a> #}
 				<span class="count"> ({{ count }})</span>
 			</a>
 		{% endfor %}
