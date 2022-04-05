@@ -6,11 +6,6 @@ tags: []
 ---
 # Blog Roadmap
 
-### Maybe? Add tailwinds?
-
-### Autoprefixer?
-why? ensure browser compabality - is this really needed?
-
 ### Dark Mode
 
 ### Minify site
@@ -26,3 +21,5 @@ https://medium.com/@tarngerine/how-the-heck-do-i-use-eleventy-the-intro-guide-i-
 https://github.com/posthtml/posthtml-minify-classnames
 
 ### Add a custom 404 page
+
+### Put CSS in its own file alongside component
