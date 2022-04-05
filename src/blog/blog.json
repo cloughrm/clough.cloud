@@ -1,4 +1,4 @@
 {
   "tags": "blog_posts",
-  "layout": "layouts/base"
+  "layout": "layouts/blogpost"
 }
