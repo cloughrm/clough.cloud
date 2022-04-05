@@ -9,11 +9,6 @@
 
 module.exports = function() {
   return {
-    headerText: `Hey there, I'm Ryan 👋🏻,
-      welcome to my personal blog. I (mostly) write about web development & products.
-      I spend my days building automated cloud incident response tools 👨🏼‍💻☁️.
-      You can find me on <a href="https://twitter.com/hotF1X">Twitter</a> &
-      <a href="https://www.linkedin.com/in/cloughrm/">LinkedIn</a>.`,
     author: 'Ryan Clough',
     year: new Date().getFullYear(),
     desktopMinWidth: '50rem',
