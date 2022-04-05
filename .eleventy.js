@@ -1,3 +1,4 @@
+const moment = require('moment');
 const posthtml = require('posthtml');
 const htmlmin = require('html-minifier');
 const minifyClassnames = require('posthtml-minify-classnames');
@@ -61,7 +62,7 @@ const minify = async function(content, outputPath) {
   return content;
 };
 
-const topicImgSrc = function (topic) {
+const topicImgSrc = function(topic) {
   topic = topic.toLowerCase();
   let prefix = '/assets/images';
   switch (topic) {
@@ -74,6 +75,10 @@ const topicImgSrc = function (topic) {
   }
 };
 
+const toUTCString = function(dt) {
+  return moment.utc(dt).format('MMMM Do, YYYY');
+}
+
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/assets/');
@@ -81,6 +86,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/css/');
   eleventyConfig.addWatchTarget('src/css/');
+
+  eleventyConfig.addFilter('toUTCString', toUTCString);
 
   eleventyConfig.addShortcode('topicImgSrc', topicImgSrc);
 
@@ -96,7 +103,7 @@ module.exports = function(eleventyConfig) {
       includes: '_includes',
       output: '_site',
     },
-    templateFormats: ['html', 'njk', 'md'],
+    templateFormats: ['html', 'md', 'liquid'],
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

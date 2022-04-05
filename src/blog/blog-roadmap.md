@@ -1,15 +1,10 @@
 ---
 title: Blog Roadmap
 description: This is the Blog Roadmap
-date: 2018-09-30
+date: 2022-04-04
 tags: []
 ---
 # Blog Roadmap
-
-### Maybe? Add tailwinds?
-
-### Autoprefixer?
-why? ensure browser compabality - is this really needed?
 
 ### Dark Mode
 
@@ -26,3 +21,5 @@ https://medium.com/@tarngerine/how-the-heck-do-i-use-eleventy-the-intro-guide-i-
 https://github.com/posthtml/posthtml-minify-classnames
 
 ### Add a custom 404 page
+
+### Put CSS in its own file alongside component

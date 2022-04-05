@@ -1,0 +1,58 @@
+<header>
+	<div class="profile-pic-wrapper">
+		<a href="/">
+			<img id="profile-pic" />
+		</a>
+	</div>
+	<div class="intro">
+		Hey there, I'm Ryan 👋🏻, welcome to my personal blog. I (mostly) write about web development & products.
+		I spend my days building automated cloud ☁️ incident response tools 👨🏼‍💻. You can find me on
+		<a class="social-link" href="https://twitter.com/hotF1X">
+			{% include "components/icon", img: "/assets/images/twitter.png" %}
+			Twitter
+		</a>
+		&
+		<a class="social-link" href="https://www.linkedin.com/in/cloughrm/">
+			{% include "components/icon", img: "/assets/images/linkedin.png" %}
+			LinkedIn
+		</a>.
+	</div>
+</header>
+
+<script type="text/javascript">
+	(function () {
+		let randInt = Math.floor(Math.random() * 3) + 1;
+		let img = document.getElementById('profile-pic');
+		img.src = '/assets/images/profile-pic-' + randInt + '.jpg';
+		img.alt = 'Ryan Clough profile picture';
+	})();
+</script>
+
+<style type="text/css">
+	header {
+		display: flex;
+		align-items: center;
+	}
+
+	header .profile-pic-wrapper {
+		width: 85px;
+		flex: 0 0 85px;
+	}
+
+	header .profile-pic-wrapper img {
+		border-radius: 100%;
+		width: 85px;
+		height: 85px;
+	}
+
+	header .intro {
+		margin-left: 2rem;
+	}
+
+	header .social-link {
+		display: inline-flex;
+		align-items: center;
+		vertical-align: bottom;
+		gap: .2rem;
+	}
+</style>
