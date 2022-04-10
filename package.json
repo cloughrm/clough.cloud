@@ -4,9 +4,10 @@
   "description": "Ryan Clough's personal website",
   "scripts": {
     "build": "npx eleventy",
-    "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy",
-    "clean": "rm -rf _site"
+    "serve": "npx eleventy --serve",
+    "clean": "rm -rf _site",
+    "dev": "npm run clean && npm run serve"
   },
   "keywords": [
     "blog",
