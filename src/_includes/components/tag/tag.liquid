@@ -1,0 +1,8 @@
+<a class="tag" href="/tags/{{ tag | slugify }}">
+	{% capture imgUrl %}{% tagImgSrc tag %}{% endcapture %}
+	{% include "components/icon/icon", img: imgUrl %}
+	<span class="label">{{ tag }}</span>
+	{% if count %}
+		<span class="count">({{ count }})</span>
+	{% endif %}
+</a>

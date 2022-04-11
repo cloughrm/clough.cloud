@@ -1,0 +1,10 @@
+<aside>
+	<h3>Filter By Tag</h3>
+	<div class="tags-wrapper">
+		{% for tagAndCount in collections.tags %}
+			{% assign tag = tagAndCount[0] %}
+			{% assign count = tagAndCount[1] %}
+			{% include "components/tag/tag", tag: tag, count: count %}
+		{% endfor %}
+	</div>
+</aside>

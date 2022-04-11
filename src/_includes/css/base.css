@@ -1,6 +1,3 @@
-{% include "css/reset.css" %}
-{% include "css/colors.css" %}
-
 html {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	color: var(--gray-700);

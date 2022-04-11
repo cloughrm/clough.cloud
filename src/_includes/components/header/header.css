@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+header .profile-pic-wrapper {
+    width: 85px;
+    flex: 0 0 85px;
+}
+
+header .profile-pic-wrapper img {
+    border-radius: 100%;
+    width: 85px;
+    height: 85px;
+}
+
+header .intro {
+    margin-left: 2rem;
+}
+
+header .social-link {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: bottom;
+    gap: .2rem;
+}

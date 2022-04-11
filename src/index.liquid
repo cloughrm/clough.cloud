@@ -1,23 +1,8 @@
 ---
-layout: layouts/base
+layout: layouts/index-layout
 title: "Blog | clough.cloud"
 ---
 <section id="blog">
-	{% include "components/topics-list" %}
-	{% include "components/blog-posts-list" %}
+	{% include "components/tags-list/tags-list" %}
+	{% include "components/blog-posts-list/blog-posts-list" %}
 </section>
-
-<style type="text/css">
-	section#blog {
-		flex-direction: row-reverse;
-		gap: 2rem;
-		margin-top: 1rem;
-	}
-
-	/* Desktop Layout */
-	@media (min-width: {{ meta.desktopMinWidth }}) {
-		section#blog {
-			display: flex;
-		}
-	}
-</style>

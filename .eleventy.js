@@ -5,7 +5,7 @@ const minifyClassnames = require('posthtml-minify-classnames');
 
 const EXCLUDED_TAGS = ['blog_posts'];
 
-const generateTopics = function(collectionApi) {
+const generateTags = function(collectionApi) {
   const tagsHash = {};
   collectionApi.getAll().map(item => {
     if (item.data.tags) {
@@ -62,7 +62,7 @@ const minify = async function(content, outputPath) {
   return content;
 };
 
-const topicImgSrc = function(topic) {
+const tagImgSrc = function(topic) {
   topic = topic.toLowerCase();
   let prefix = '/assets/images';
   switch (topic) {
@@ -80,7 +80,6 @@ const toUTCString = function(dt) {
 }
 
 module.exports = function(eleventyConfig) {
-
   eleventyConfig.addPassthroughCopy('src/assets/');
   eleventyConfig.addWatchTarget('src/assets/');
 
@@ -89,9 +88,9 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('toUTCString', toUTCString);
 
-  eleventyConfig.addShortcode('topicImgSrc', topicImgSrc);
+  eleventyConfig.addShortcode('tagImgSrc', tagImgSrc);
 
-  eleventyConfig.addCollection('topics', generateTopics);
+  eleventyConfig.addCollection('tags', generateTags);
 
   if (process.env.ENV === 'prod') {
     eleventyConfig.addTransform('htmlmin', minify);

@@ -8,35 +8,10 @@
 					{% if tag == "blog_posts" %}
 						{% continue %}
 					{% endif %}
-					{% include "components/tag", tag: tag, count: false %}
+					{% include "components/tag/tag", tag: tag, count: false %}
 				{% endfor %}
 			</div>
 			<p>{{ post.data.description }}</p>
 		</article>
 	{% endfor %}
 </main>
-
-<style type="text/css">
-	main {
-		flex: 1;
-		padding: 1rem 0 1rem 0;
-	}
-
-	main .post-title a {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	main .subheading {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	main .post-date {
-		font-style: italic;
-	}
-
-	main p {
-		margin-bottom: .75rem;
-	}
-</style>

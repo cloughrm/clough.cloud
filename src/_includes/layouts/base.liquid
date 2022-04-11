@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏼‍💻</text></svg>">
-	{% capture css %}{% include "css/base.css" %}{% endcapture %}
 	<style type="text/css">
-		{{ css }}
+		{% include "css/reset.css" %}
+		{% include "css/colors.css" %}
+		{% include "css/base.css" %}
+		{% include "components/header/header.css" %}
+		{% include "components/footer/footer.css" %}
+		{% include "components/icon/icon.css" %}		
+		{% include "components/tag/tag.css" %}		
 	</style>
 </head>
 	<body>
 		<div class="layout">
-			{% include "components/header" %}
+			{% include "components/header/header" %}
 
 			{{ content }}
 
-			{% include "components/footer" %}
+			{% include "components/footer/footer" %}
 		</div>
 	</body>
 </html>

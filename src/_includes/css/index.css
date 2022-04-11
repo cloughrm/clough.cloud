@@ -1,0 +1,12 @@
+section#blog {
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* Desktop Layout */
+@media (min-width: {{ meta.desktopMinWidth }}) {
+    section#blog {
+        display: flex;
+    }
+}
