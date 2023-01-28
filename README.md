@@ -28,13 +28,6 @@ This theme is self-documented \_ which means articles/posts in this theme can al
 
 _Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
 
-## ✅ Lighthouse Score
-
-<p align="center">
-  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-  <a>
-</p>
 
 ## 🚀 Project Structure
 
@@ -82,15 +75,15 @@ Documentation can be read in two formats\_ _markdown_ & _blog post_.
 
 ## 💻 Tech Stack
 
-**Main Framework** - [Astro](https://astro.build/)  
-**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**Component Framework** - [ReactJS](https://reactjs.org/)  
-**Styling** - [TailwindCSS](https://tailwindcss.com/)  
-**UI/UX** - [Figma](https://figma.com)  
-**Fuzzy Search** - [FuseJS](https://fusejs.io/)  
-**Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
-**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
+**Main Framework** - [Astro](https://astro.build/)
+**Type Checking** - [TypeScript](https://www.typescriptlang.org/)
+**Component Framework** - [ReactJS](https://reactjs.org/)
+**Styling** - [TailwindCSS](https://tailwindcss.com/)
+**UI/UX** - [Figma](https://figma.com)
+**Fuzzy Search** - [FuseJS](https://fusejs.io/)
+**Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)
+**Code Formatting** - [Prettier](https://prettier.io/)
+**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)
 **Illustration in About Page** - [https://freesvgillustration.com](https://freesvgillustration.com/)
 
 ## 👨🏻‍💻 Running Locally
