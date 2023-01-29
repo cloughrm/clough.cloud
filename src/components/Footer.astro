@@ -14,11 +14,14 @@ const { noMarginTop = false } = Astro.props;
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
   <Hr noPadding />
   <div class="footer-wrapper">
-    <Socials centered />
-    <div class="copyright-wrapper">
-      <span>Copyright &#169; {currentYear}</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
+    <Socials />
+    <div class="footer-text-wrapper">
+      <div class="copyright-wrapper">
+        <span>Copyright &#169; {currentYear}</span>
+        <span class="separator">&nbsp;|&nbsp;</span>
+        <span>All rights reserved.</span>
+      </div>
+      <div class="text-center">Opinions are my own & not the views of my employer.</div>
     </div>
   </div>
 </footer>
@@ -36,8 +39,11 @@ const { noMarginTop = false } = Astro.props;
   .link-button svg {
     @apply scale-125;
   }
+  .footer-text-wrapper {
+    @apply text-xs flex flex-col justify-center;
+  }
   .copyright-wrapper {
-    @apply my-2 flex flex-col sm:flex-row items-center whitespace-nowrap;
+    @apply flex flex-col sm:flex-row items-center whitespace-nowrap;
   }
   .separator {
     @apply hidden sm:inline;

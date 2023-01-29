@@ -19,32 +19,36 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
       </svg>
       <span className="sr-only">Posted on:</span>
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
-        <FormattedDatetime datetime={datetime} />
+        <UTCFormattedDatetime datetime={datetime} />
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ datetime }: { datetime: string }) => {
+const UTCFormattedDatetime = ({ datetime }: { datetime: string }) => {
   const myDatetime = new Date(datetime);
-
-  const date = myDatetime.toLocaleDateString([], {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-  const time = myDatetime.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   return (
     <>
-      {date}
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      {time}
+      <span>{months[myDatetime.getUTCMonth()]}</span>
+      <span>&nbsp;</span>
+      <span>{myDatetime.getUTCDate()}</span>
+      <span>,&nbsp;</span>
+      <span>{myDatetime.getUTCFullYear()}</span>
     </>
   );
 };
