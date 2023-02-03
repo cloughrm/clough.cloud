@@ -108,6 +108,7 @@ Lets be honest - nobody uses these apps, right? I will admit, I occasionally use
   - Acvite process name: `false`
   - Dimensions: `false`
 - Profiles: Click `Default` to save
+- Edit Menu → Marks → Automatically Mark Prompt Lines: `false`
 
 ### Terminal Utilities
 - Install Homebrew
