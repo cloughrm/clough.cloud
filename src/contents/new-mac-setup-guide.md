@@ -80,6 +80,9 @@ Lets be honest - nobody uses these apps, right? I will admit, I occasionally use
   - Settings → Sync → Start using sync: `true`
 - [Magnet](https://apps.apple.com/us/app/magnet/id441258766?mt=12)
   - Preferences → Disable all keyboard shortcuts except `Left` & `Right`
+- [Mos](https://mos.caldis.me)
+  - Preferences → Miscellaneous → Launch on Login: `true`
+  - Preferences → Miscellaneous → Hide Status Bar Icon: `true`
 
 ## Terminal
 
