@@ -183,6 +183,10 @@ export RPROMPT='${COLOR_GRAY}$(parse_git_branch)${COLOR_DEFAULT}'
 fortune -s 50% computers 50% all | pokemonsay
 ```
 
+After all these modifications - your terminal should look something like this:
+<p align="center"><img src="/blog/terminal.png" alt="My macOS Terminal" width="75%" /></p>
+
+
 ## System Settings
 
 - Appearance
