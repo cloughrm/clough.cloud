@@ -88,6 +88,12 @@ Lets be honest - nobody uses these apps, right? I will admit, I occasionally use
 
 - Create Development Folder: mkdir `~/Dev`
 - Install Command Line Developer Tools: `xcode-select --install`
+- Disable Apple's Shell Session history ([Explanation](https://apple.stackexchange.com/a/427568))
+  - Create zshenv file: `touch ~/.zshenv`
+
+    ```bash
+    SHELL_SESSIONS_DISABLE=1
+    ```
 
 ### Terminal Theme
 
@@ -156,14 +162,16 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 setopt AUTO_CD
 
 # ZSH History
-export HISTFILESIZE=100000
-export HISTSIZE=100000
-export HISTFILE="~/.zsh_history"
-setopt SHARE_HISTORY # share history across multiple zsh sessions
-setopt HIST_REDUCE_BLANKS # removes blank lines from history
-setopt HIST_IGNORE_DUPS # do not store duplications
-bindkey "^[[A" history-beginning-search-backward # History substring search
-bindkey "^[[B" history-beginning-search-forward # History substring search
+export HISTSIZE=20000
+export SAVEHIST=10000
+setopt sharehistory # share history across multiple zsh sessions
+
+# History search completion
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 # Load the ZSH config changes
 autoload -Uz compinit && compinit
@@ -181,6 +189,10 @@ export RPROMPT='${COLOR_GRAY}$(parse_git_branch)${COLOR_DEFAULT}'
 
 # Fun greeting from a random pokemon
 fortune -s 50% computers 50% all | pokemonsay
+
+# Docker fix for apple silicon
+export DOCKER_DEFAULT_PLATFORM="linux/amd64"
+source /Users/ryan/.docker/init-zsh.sh || true # Added by Docker Desktop
 ```
 
 After all these modifications - your terminal should look something like this:
