@@ -15,40 +15,17 @@ As someone who builds software for a living & as a hobby - I go through lots of 
 
 ## Table of contents
 
-## Browser: Safari
+## Browser: Brave
 
-As of 2023, my daily driver is Safari. I also use Brave Browser heavly for development.
+As of March 2023, my daily driver is [Brave](https://brave.com/).
 
-### Safari Extensions
+### Set up Brave Sync
 
-- [Neeva](https://apps.apple.com/us/app/neeva-search-protect/id1540663248?mt=12)
-  - Configure Neeva Extension:
-    - Make Neeva Default Search: `true`
-    - Block tracking cookies: `false`
-    - Block tracking requests: `false`
-
-- [1Blocker](https://apps.apple.com/us/app/1blocker-ad-blocker/id1365531024)
-  - Configure 1Blocker Extension:
-    - Block Ads Extension: `Enable`
-    - Block Annoyances: `Enable`
-    - Custom Rules: `Enable`
-    - Be sure to open 1Blocker App to enable everything
-
-- [Notion Web Clipper](https://apps.apple.com/us/app/notion-web-clipper/id1559269364?mt=12)
-- [1Password](https://apps.apple.com/us/app/1password-for-safari/id1569813296?mt=12)
-
-### Safari Preferences
-
-- General → Safari opens with: `All non-private from last session`
-- Autofill → User name and passwords: `false`
-- Advanced → Show Develop in menu bar: `true`
-- Advanced → Smart Search Field → Show full website address: `true`
-- View → Customize Toolbar…: Remove `Privacy Report` & `Neeva Extension`
-
+- Settings → Sync → Manage you synced devices
 
 ## Stock Apps to Delete
 
-Lets be honest - nobody uses these apps, right? I will admit, I occasionally use Numbers, so that is not deleted.
+Lets be honest - nobody uses these apps, right?
 
 - GarageBand
 - iMovie
@@ -202,7 +179,7 @@ After all these modifications - your terminal should look something like this:
 ## System Settings
 
 - Appearance
-  - Appearance → Appearance: `Light`
+  - Appearance → Appearance: `Auto`
 - Control Center
   - Control Center Modules → Bluetooth: `Show in Menu Bar`
   - Other Modules → Battery → Show Percentage: `true`
@@ -233,6 +210,7 @@ After all these modifications - your terminal should look something like this:
 
 - View → Show Path Bar
 - Preferences → General → New Finder windows show: `ryan`
+
 ### Finder List View by Default
 - Go → Go To Folder: `/`
 - View → Show View Options (⌘ - J)
