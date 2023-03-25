@@ -40,6 +40,13 @@ Lets be honest - nobody uses these apps, right?
   - Preferences
     - Startup and window behaviour → Open Spotify Automatically after you log into the computer: `No`
     - Display → See what your friends are playing: `false`
+- [Copilot](https://copilot.money/download)
+- [VSCode](https://code.visualstudio.com/)
+- [GitHub Desktop](https://desktop.github.com)
+- [Brave](https://brave.com/)
+  - Settings → Sync → Start using sync: `true`
+
+## Utilities to Install
 - [Sensible Side Buttons](https://sensible-side-buttons.archagon.net/)
   - Menu Bar Settings
     - Enabled: `true`
@@ -50,11 +57,6 @@ Lets be honest - nobody uses these apps, right?
   - Battery: `false`
   - RAM → Update interval: `3 sec`
   - RAM → Update interval for top processes: `3 sec`
-- [Copilot](https://copilot.money/download)
-- [VSCode](https://code.visualstudio.com/)
-- [GitHub Desktop](https://desktop.github.com)
-- [Brave](https://brave.com/)
-  - Settings → Sync → Start using sync: `true`
 - [Magnet](https://apps.apple.com/us/app/magnet/id441258766?mt=12)
   - Preferences → Disable all keyboard shortcuts except `Left` & `Right`
 - [Mos](https://mos.caldis.me)
@@ -244,11 +246,6 @@ After all these modifications - your terminal should look something like this:
 ## Messages
 
 - Settings → iMessage → Enable Messages in iCloud: `true`
-
-## Podcasts
-
-- Settings → Playback → Continuous Playback: `Stop when an episode ends`
-- Settings → Playback → Skip Buttons → Forward: `15 seconds`
 
 ## Dock
 
