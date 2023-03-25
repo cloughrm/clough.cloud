@@ -178,6 +178,43 @@ After all these modifications - your terminal should look something like this:
 <p align="center"><img src="/blog/terminal.png" alt="My macOS Terminal" width="75%" /></p>
 
 
+## VSCode Config
+Installed Extensions
+- One Dark Pro (One Dark Pro Mix)
+- Shebang Snippets
+- YAML
+
+User Settings
+```json
+{
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "One Dark Pro Mix",
+    "editor.scrollBeyondLastLine": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "cSpell.ignoreWords": [
+        "Siri"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "redhat.telemetry.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    }
+}
+```
+
 ## System Settings
 
 - Appearance
