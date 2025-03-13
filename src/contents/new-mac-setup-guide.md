@@ -15,14 +15,6 @@ As someone who builds software for a living & as a hobby - I go through lots of 
 
 ## Table of contents
 
-## Browser: Brave
-
-As of March 2023, my daily driver is [Brave](https://brave.com/).
-
-### Set up Brave Sync
-
-- Settings → Sync → Manage you synced devices
-
 ## Stock Apps to Delete
 
 Lets be honest - nobody uses these apps, right?
@@ -35,16 +27,18 @@ Lets be honest - nobody uses these apps, right?
 ## Apps to Install
 
 - [1Password](https://1password.com/downloads/mac/)
-- [Notion](https://www.notion.so/desktop)
-- [Spotify](https://www.spotify.com/us/download/mac/)
-  - Preferences
-    - Startup and window behaviour → Open Spotify Automatically after you log into the computer: `No`
-    - Display → See what your friends are playing: `false`
-- [Copilot](https://copilot.money/download)
 - [VSCode](https://code.visualstudio.com/)
 - [GitHub Desktop](https://desktop.github.com)
 - [Brave](https://brave.com/)
   - Settings → Sync → Start using sync: `true`
+
+## Browser: Brave
+
+As of March 2025, my daily driver are Safari + [Brave](https://brave.com/).
+
+### Set up Brave Sync
+
+- Settings → Sync → Manage you synced devices
 
 ## Utilities to Install
 - [Sensible Side Buttons](https://sensible-side-buttons.archagon.net/)
@@ -52,13 +46,6 @@ Lets be honest - nobody uses these apps, right?
     - Enabled: `true`
     - Hide Menu Bar Icon: `true`
   - System Settings → General → Login Items → Open at Login: Add `/Applications/SensibleSideButtons.app`
-- [exelban/stats](https://github.com/exelban/stats)
-  - Disk: `false`
-  - Battery: `false`
-  - RAM → Update interval: `3 sec`
-  - RAM → Update interval for top processes: `3 sec`
-- [Magnet](https://apps.apple.com/us/app/magnet/id441258766?mt=12)
-  - Preferences → Disable all keyboard shortcuts except `Left` & `Right`
 - [Mos](https://mos.caldis.me)
   - Preferences → Miscellaneous → Launch on Login: `true`
   - Preferences → Miscellaneous → Hide Status Bar Icon: `true`
@@ -104,10 +91,8 @@ Lets be honest - nobody uses these apps, right?
 
 - Hush the login messages: `touch ~/.hushlogin`
 - Install httpie: `brew install httpie`
-- Install Node.js: `brew install node@18`
+- Install Node.js: `brew install node`
 - Install htop: `brew install htop`
-- Install fortune: `brew install fortune`
-- Install pokemonsay: `brew tap possatti/possatti && brew install pokemonsay`
 
 ### .zshrc
 Create a `.zshrc` with `touch ~/.zshrc` and add the following:
@@ -157,7 +142,7 @@ autoload -Uz compinit && compinit
 
 # Prompt, git branch on right
 function parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\\1]/p'
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
 setopt PROMPT_SUBST
 COLOR_DEFAULT=$'%f'
@@ -179,41 +164,7 @@ After all these modifications - your terminal should look something like this:
 
 
 ## VSCode Config
-Installed Extensions
-- One Dark Pro (One Dark Pro Mix)
-- Shebang Snippets
-- YAML
-
-User Settings
-```json
-{
-    "workbench.startupEditor": "none",
-    "editor.minimap.enabled": false,
-    "editor.fontSize": 14,
-    "workbench.colorTheme": "One Dark Pro Mix",
-    "editor.scrollBeyondLastLine": false,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "security.workspace.trust.untrustedFiles": "open",
-    "cSpell.ignoreWords": [
-        "Siri"
-    ],
-    "files.exclude": {
-        "**/__pycache__": true
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "redhat.telemetry.enabled": false,
-    "[python]": {
-        "editor.formatOnType": true
-    }
-}
-```
+- Sign in with GitHub and sync everything
 
 ## System Settings
 
@@ -223,20 +174,20 @@ User Settings
   - Control Center Modules → Bluetooth: `Show in Menu Bar`
   - Other Modules → Battery → Show Percentage: `true`
   - Menu Bar Only → Spotlight: `Don't Show in Menu Bar`
-- Siri & Spotlight
+- Apple Intellignce & Siri
   - Listen for Hey Siri: Off
     - Siri voice: `Australian Voice 2`
-  - Spotlight Privacy: Add `~/Dev`
+- Spotlight
+  - Search Privacy: Add `~/Dev`
+  - Help Improve Apple Search: `false`
 - Desktop and Dock:
-  - Show recent applications in Dock: `false`
-  - Position on screen: `Left`
+  - Show suggested and recent applications in Dock: `false`
+  - Position on screen: `Bottom`
+  - Click wallpaper to reveal desktop: `Only in Stage Manager`
 - Displays
   - Automatically adjust brightness: `false`
-  - Advanced → Slightly dim the display on battery: `false`
-- Wallpaper
-  - Colors → Auto-Rotate
-  - Change picture: `Every 15 mins`
-- Screen Saver: `Drift`
+- Battery 
+  - Options → Slightly dim the display on battery: `false`
 - Lock Screen
   - Turn display off on power adapter when inactive: `For 1 hour`
 - Touch ID & Password
@@ -273,12 +224,10 @@ User Settings
   - Downloads
 - iCloud
   - iCloud Drive
-- Locations
-  - Network
 
 ## Notification Center
 
-- Remove all the widgets except weather and calendar
+- Remove all widgets
 
 ## Messages
 
@@ -287,9 +236,7 @@ User Settings
 ## Dock
 
 - Downloads Stack → Right Click → View content as: `Grid`
-- Add small spacers: `defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'; killall Dock`
-
-![My macOS Dock](/blog/dock.png)
+- Downloads Stack → Right Click → Display as: `Folder`
 
 ## TextEdit
 
